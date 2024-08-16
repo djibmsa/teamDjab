@@ -94,7 +94,8 @@
   height: 5rem;
 }
 
-a {
+a,
+.mail {
   color: aliceblue;
   text-decoration: none;
 }
