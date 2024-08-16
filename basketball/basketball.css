@@ -97,6 +97,7 @@ h2 {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  font-family: baskerville;
 }
 .card-body h2 {
   margin: 10px 0px;
