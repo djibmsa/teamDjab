@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Webdesigner, graphiste et developpeur frontend freelance, je désigne et développe des applications web innovantes et créatives !"
+    />
+    <link
+      rel="shortcut icon"
+      href="/assets/logo_teamDjab.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/form/form.css" />
+    <title>teamDjab</title>
+  </head>
+
+  <body>
+    <div id="logoOverlay" class="logo-overlay" style="display: none;">
+        <img src="/assets/teamDjab.jpg" alt="teamDjab Logo" class="overlay-logo">
+      </div>
+     <header>
+      <nav class="navbar">
+        <img src="/assets/teamDjab.jpg" class="logo" alt="logo_website" />
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <ul class="menu">
+          <li class="menu_group"><a href="/index/index.html">Accueil</a></li>
+          <li class="menu_group">
+            <a href="/basketball/basketball.html">Basketball</a>
+          </li>
+          <li class="menu_group">
+            <a href="/streetball/streetball.html">Streetball</a>
+          </li>
+          <li class="menu_group"><a href="form/form.html">Formulaire</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form class="formSport">
+        Prénom:
+        <label>
+          <input
+            type="text"
+            name="firstname"
+            id="first"
+            placeholder="prénom"
+            required
+        /></label>
+        Nom:
+        <label>
+          <input
+            type="text"
+            name="lastname"
+            id="last"
+            placeholder="nom"
+            required
+        /></label>
+        Pseudo:
+        <label>
+          <input type="text" placeholder="pseudo" required />
+        </label>
+        Email:
+        <label><input type="email" placeholder="email" required /></label>
+        Password:
+        <label>
+          <input type="password" placeholder="mot de passe" required />
+        </label>
+        Date de naissance: 
+        <label><input type="date" required /></label>
+      
+        <label for="playerSelect">Quel est ton joueur préféré</label>
+        <select name="player" id="playerSelect">
+          <option value="">--Veuillez choisir votre joueur--</option>
+          <option value="kobe">Kobe Bryant</option>
+          <option value="jordan">Michael Jordan</option>
+          <option value="lebron">Lebron James</option>
+          <option value="another">Autres</option>
+        </select>
+        Ecrivez votre message:
+        <label>
+          <textarea
+            id="message"
+            name="message"
+            rows="5"
+            cols="33"
+            maxlength="500"
+            wrap
+          >Tapez votre joueur ici...</textarea>
+        </label>
+        <label>
+          S'inscrire à la newsletter <input type="checkbox" checked />
+        </label>
+        <button type="submit" class="validate">Valider le formulaire</button>
+      </form>
+    </main>
+
+    <footer>
+      <nav class="navFoot">
+        <ul class="menuFoot">
+          <h4>Contact:</h4>
+          <li class="menu_group2">
+            <a
+              href="https://www.linkedin.com/feed/"
+              title="Retrouvez toute mon actualité sur mon profil"
+              >linkedin</a>
+          </li>
+          <li class="menu_group2">
+            <a href="https://github.com/djibmsa" target="_blank">github</a>
+          </li>
+          <li class="menu_group2">
+            <p class="mail">djibmsa@gmail.com</p>
+          </li>
+          <li class="menu_group2">
+            <span class="copyqright">teamDjab 2024 ©</span>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="/form/form.js"></script>
+  </body>
+</html>
