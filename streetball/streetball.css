@@ -1,0 +1,152 @@
+:root {
+  --primary-color: #57c7ab; /* Définit la couleur principale utilisée dans le thème */
+  --light: #ffeeee; /* Définit une couleur claire, mais elle est redéfinie plus bas */
+  --dark: #112211; /* Définit une couleur sombre pour le thème */
+  --shadow-color: #226655; /* Définit la couleur des ombres ou d'éléments spécifiques */
+  --light: #f8fdf0; /* Redéfinit la couleur claire pour le thème (remplace la précédente) */
+}
+
+* {
+  box-sizing: border-box; /* Définit le modèle de boîte (box model), mais la valeur '0' est incorrecte. Devrait être 'border-box' ou autre. */
+  margin: 0; /* Supprime les marges par défaut de tous les éléments */
+  padding: 0; /* Supprime les espacements internes (padding) par défaut de tous les éléments */
+}
+
+/* Styles de base */
+.logo {
+  width: 8rem; /* Définit la largeur de l'élément logo */
+  border-radius: 5rem; /* Arrondit les coins du logo en un cercle (le rayon est supérieur à la largeur) */
+  padding: 1rem; /* Ajoute un espacement interne autour du logo */
+}
+
+.navbar {
+  display: flex; /* Utilise Flexbox pour aligner les éléments à l'intérieur de la navbar */
+  align-items: center; /* Centre verticalement les éléments de la navbar */
+  justify-content: space-between; /* Répartit l'espace entre les éléments de la navbar */
+  background-color: var(
+    --shadow-color
+  ); /* Définit la couleur de fond de la navbar en utilisant une variable CSS */
+  width: 100%; /* Fait en sorte que la navbar prenne toute la largeur de l'écran */
+  top: 0; /* Positionne la navbar en haut de la fenêtre */
+  left: 0; /* Positionne la navbar à gauche de la fenêtre */
+  z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments de la page */
+  position: fixed; /* Fixe la navbar en haut de la fenêtre, même en défilant */
+}
+
+.menu {
+  display: flex; /* Utilise Flexbox pour aligner les éléments du menu horizontalement */
+  list-style: none; /* Supprime les puces ou numéros des éléments de liste */
+}
+
+.menu_group a {
+  text-decoration: none; /* Supprime la décoration du texte (comme le soulignement) pour les liens */
+  padding: 10px; /* Ajoute un espacement interne autour des liens */
+  color: black; /* Définit la couleur du texte des liens en noir */
+}
+
+/* Icône du menu burger */
+.burger {
+  display: none; /* Cache l'icône du burger sur les grands écrans */
+  flex-direction: column; /* Aligne les lignes du burger en colonne */
+  cursor: pointer; /* Change le curseur en pointeur (main) lorsqu'on survole l'icône */
+  padding-right: 1rem; /* Ajoute un espacement à droite de l'icône burger */
+}
+
+.burger .line {
+  width: 25px; /* Définit la largeur des lignes de l'icône burger */
+  height: 3px; /* Définit la hauteur des lignes de l'icône burger */
+  background-color: black; /* Colore les lignes du burger en noir */
+  margin: 4px 0; /* Ajoute un espacement vertical entre les lignes du burger */
+}
+
+.navFoot ul li {
+  display: flex; /* Utilise Flexbox pour aligner les éléments dans chaque élément de liste */
+  justify-content: space-around; /* Répartit l'espace de manière uniforme autour des éléments */
+  flex-direction: row; /* Aligne les éléments dans chaque ligne horizontalement */
+  list-style: none; /* Supprime les puces ou numéros des éléments de liste */
+  color: #112211; /* Définit la couleur du texte */
+  text-decoration: none; /* Supprime la décoration du texte pour les éléments de la liste */
+  list-style: none; /* Supprime à nouveau les puces ou numéros des éléments de liste (cette ligne est redondante) */
+}
+
+.storystreet {
+  margin: 1rem;
+  font-family: baskerville;
+}
+
+.fireball {
+  width: 50vw;
+  margin-top: 9rem;
+  margin-left: 19rem;
+  border-radius: 20rem;
+}
+
+.three {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuFoot {
+  display: flex; /* Utilise Flexbox pour aligner les éléments du menu du pied de page */
+  justify-content: space-around; /* Répartit l'espace de manière uniforme autour des éléments */
+  align-items: center; /* Centre verticalement les éléments à l'intérieur du pied de page */
+  flex-direction: row; /* Aligne les éléments horizontalement dans le pied de page */
+  background-color: #226655; /* Définit la couleur de fond du pied de page */
+  height: 5rem; /* Définit la hauteur du pied de page */
+}
+
+a,
+.mail {
+  color: aliceblue; /* Définit la couleur du texte des liens en 'aliceblue' */
+  text-decoration: none; /* Supprime la décoration du texte pour les liens */
+}
+
+/* Styles pour la réactivité (Responsive Design) */
+@media (max-width: 768px) {
+  /* Applique ces styles uniquement pour les écrans de moins de 768px de large */
+  .logo {
+    width: 6rem; /* Définit la largeur de l'élément logo */
+    border-radius: 5rem; /* Arrondit les coins du logo en un cercle (le rayon est supérieur à la largeur) */
+    padding: 1rem; /* Ajoute un espacement interne autour du logo */
+  }
+
+  .menu {
+    display: none; /* Cache le menu par défaut sur les petits écrans */
+    flex-direction: column; /* Aligne les éléments du menu verticalement sur les petits écrans */
+    justify-content: space-evenly; /* Répartit l'espace de manière uniforme entre les éléments du menu */
+    align-items: center; /* Centre les éléments du menu horizontalement */
+    width: 100vw; /* Le menu occupe toute la largeur de la fenêtre (viewport) */
+    height: 100vh; /* Le menu occupe toute la hauteur de la fenêtre */
+    background-color: var(
+      --primary-color
+    ); /* Définit la couleur de fond du menu avec la couleur principale */
+    position: absolute; /* Positionne le menu de manière absolue par rapport à la navbar */
+    top: 96px; /* Positionne le menu juste en dessous de la navbar */
+    left: -15px; /* Positionne légèrement le menu à gauche pour un alignement parfait */
+    padding: 10px; /* Ajoute un espacement interne autour des éléments du menu */
+  }
+
+  .menu.active {
+    display: flex; /* Affiche le menu sous forme de flexbox lorsque le menu est activé */
+  }
+
+  .burger {
+    display: flex; /* Affiche l'icône du burger sur les petits écrans */
+  }
+
+  .ball img {
+    width: 100%;
+    margin-top: 5rem;
+    margin-left: 0;
+    border-radius: 0;
+  }
+
+  .three {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
