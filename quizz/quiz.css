@@ -1,0 +1,231 @@
+:root {
+  --primary-color: #57c7ab; /* Définit la couleur principale utilisée dans le thème */
+  --light: #ffeeee; /* Définit une couleur claire, mais elle est redéfinie plus bas */
+  --dark: #112211; /* Définit une couleur sombre pour le thème */
+  --shadow-color: #226655; /* Définit la couleur des ombres ou d'éléments spécifiques */
+  --light: #f8fdf0; /* Redéfinit la couleur claire pour le thème (remplace la précédente) */
+}
+
+* {
+  box-sizing: border-box; /* Définit le modèle de boîte (box model), mais la valeur '0' est incorrecte. Devrait être 'border-box' ou autre. */
+  margin: 0; /* Supprime les marges par défaut de tous les éléments */
+  padding: 0; /* Supprime les espacements internes (padding) par défaut de tous les éléments */
+}
+/* Styles de base */
+.logo {
+  width: 8rem; /* Définit la largeur de l'élément logo */
+  border-radius: 5rem; /* Arrondit les coins du logo en un cercle (le rayon est supérieur à la largeur) */
+  padding: 1rem; /* Ajoute un espacement interne autour du logo */
+}
+
+.navbar {
+  display: flex; /* Utilise Flexbox pour aligner les éléments à l'intérieur de la navbar */
+  align-items: center; /* Centre verticalement les éléments de la navbar */
+  justify-content: space-between; /* Répartit l'espace entre les éléments de la navbar */
+  background-color: var(
+    --shadow-color
+  ); /* Définit la couleur de fond de la navbar en utilisant une variable CSS */
+  width: 100%; /* Fait en sorte que la navbar prenne toute la largeur de l'écran */
+  top: 0; /* Positionne la navbar en haut de la fenêtre */
+  left: 0; /* Positionne la navbar à gauche de la fenêtre */
+  z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments de la page */
+  position: fixed; /* Fixe la navbar en haut de la fenêtre, même en défilant */
+}
+
+.menu {
+  display: flex; /* Utilise Flexbox pour aligner les éléments du menu horizontalement */
+  list-style: none; /* Supprime les puces ou numéros des éléments de liste */
+}
+
+.menu_group a {
+  text-decoration: none; /* Supprime la décoration du texte (comme le soulignement) pour les liens */
+  padding: 10px; /* Ajoute un espacement interne autour des liens */
+  color: black; /* Définit la couleur du texte des liens en noir */
+}
+
+/* Icône du menu burger */
+.burger {
+  display: none; /* Cache l'icône du burger sur les grands écrans */
+  flex-direction: column; /* Aligne les lignes du burger en colonne */
+  cursor: pointer; /* Change le curseur en pointeur (main) lorsqu'on survole l'icône */
+  padding-right: 1rem; /* Ajoute un espacement à droite de l'icône burger */
+}
+
+.burger .line {
+  width: 25px; /* Définit la largeur des lignes de l'icône burger */
+  height: 3px; /* Définit la hauteur des lignes de l'icône burger */
+  background-color: black; /* Colore les lignes du burger en noir */
+  margin: 4px 0; /* Ajoute un espacement vertical entre les lignes du burger */
+}
+
+.navFoot ul li {
+  display: flex; /* Utilise Flexbox pour aligner les éléments dans chaque élément de liste */
+  justify-content: space-around; /* Répartit l'espace de manière uniforme autour des éléments */
+  flex-direction: row; /* Aligne les éléments dans chaque ligne horizontalement */
+  list-style: none; /* Supprime les puces ou numéros des éléments de liste */
+  color: #112211; /* Définit la couleur du texte */
+  text-decoration: none; /* Supprime la décoration du texte pour les éléments de la liste */
+  list-style: none; /* Supprime à nouveau les puces ou numéros des éléments de liste (cette ligne est redondante) */
+}
+
+body {
+  background-image: url("/assets/djaball.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.quizz {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light);
+}
+.quizz_box {
+  background-color: #57c7ab;
+  border-radius: 5rem;
+  margin: 4rem;
+}
+.quest_quizz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  color: var(--light);
+}
+.answer_quizz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 25px;
+  color: var(--shadow-color);
+}
+.sport {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.quest_group {
+  background-color: aquamarine;
+  width: 100%;
+  font-size: 1.05em;
+  line-height: 4.15;
+  text-align: left;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.quest_group:hover {
+  background-color: var(--shadow-color);
+  color: aquamarine;
+  cursor: pointer;
+}
+.navFoot ul li {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style: none;
+  color: #112211;
+  text-decoration: none;
+  list-style: none;
+}
+.option_letter {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 16px;
+  color: var(--light);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn_validate {
+  background-color: rgb(228, 147, 147);
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  width: 50%;
+  font-size: 1.05em;
+}
+.btn_validate:hover {
+  cursor: pointer;
+  background-color: rgb(92, 85, 85);
+  transition: 0.25 ease-out;
+  color: var(--light);
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.menuFoot {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: #226655;
+  height: 5rem;
+}
+
+a,
+.mail {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+/* Styles pour la réactivité (Responsive Design) */
+@media (max-width: 768px) {
+  /* Applique ces styles uniquement pour les écrans de moins de 768px de large */
+  .logo {
+    width: 6rem; /* Définit la largeur de l'élément logo */
+    border-radius: 5rem; /* Arrondit les coins du logo en un cercle (le rayon est supérieur à la largeur) */
+    padding: 1rem; /* Ajoute un espacement interne autour du logo */
+  }
+
+  .menu {
+    display: none; /* Cache le menu par défaut sur les petits écrans */
+    flex-direction: column; /* Aligne les éléments du menu verticalement sur les petits écrans */
+    justify-content: space-evenly; /* Répartit l'espace de manière uniforme entre les éléments du menu */
+    align-items: center; /* Centre les éléments du menu horizontalement */
+    width: 100vw; /* Le menu occupe toute la largeur de la fenêtre (viewport) */
+    height: 100vh; /* Le menu occupe toute la hauteur de la fenêtre */
+    background-color: var(
+      --primary-color
+    ); /* Définit la couleur de fond du menu avec la couleur principale */
+    position: absolute; /* Positionne le menu de manière absolue par rapport à la navbar */
+    top: 96px; /* Positionne le menu juste en dessous de la navbar */
+    left: -15px; /* Positionne légèrement le menu à gauche pour un alignement parfait */
+    padding: 10px; /* Ajoute un espacement interne autour des éléments du menu */
+  }
+
+  .menu.active {
+    display: flex; /* Affiche le menu sous forme de flexbox lorsque le menu est activé */
+  }
+
+  .burger {
+    display: flex; /* Affiche l'icône du burger sur les petits écrans */
+  }
+  .quest_quizz {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 2rem;
+  }
+  .quest_group {
+    font-size: .90em;
+  }
+}
