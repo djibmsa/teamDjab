@@ -1,47 +1,14 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.button-pokemon {
-  padding: 0.5rem 1rem;
-  background-color:bisque;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+button {
+  box-shadow: 0px 10px 14px -7px #3e7327;
+  background: linear-gradient(to bottom, #77b55a 5%, #72b352 100%);
+  background-color: #77b55a;
+  border: 1px solid #4b8f29;
   cursor: pointer;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  transition: background-color 0.2s, transform 0.2s;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 12px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #5b8a3c;
 }
-
-.button-pokemon:hover {
-  background-color:burlywood;
-  transform: scale(1.05);
-}
-
-.card {
-  width: 200px;
-  padding: 1rem;
-  margin-top: 2rem;
-  background-color: lightgreen;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px gray;
-  color: white;
-  font-size: 1.6rem;
-  text-align: center;
-  text-shadow: 0px 0px 5px gray;
-}
-
-.card-img {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.5rem;
-  background-color: white;
-  border-radius: inherit;
-  box-shadow: inherit;
-}
-
-
 
