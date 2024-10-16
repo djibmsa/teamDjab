@@ -1,0 +1,30 @@
+nav {
+    ul {
+      display: flex;
+      list-style-type: none;
+      li {
+        margin: 10px;
+      }
+    }
+  }
+  
+  h1 {
+    text-align: center;
+  }// create a variable fontStyle and assign the value of "Courier New", Courier;
+// create a variable fontColor and assign the value of #d41f1f;
+
+// apply the property font-family and color to your h1 tag, with the variable values
+
+nav {
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin: 10px;
+    }
+  }
+}
+
+h1 {
+  text-align: center;
+}
