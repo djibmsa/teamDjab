@@ -1,260 +1,175 @@
 :root {
-    --primary-color: #57c7ab; /* Définit la couleur principale utilisée dans le thème */
-    --light: #ffeeee; /* Définit une couleur claire (ici, la couleur est définie mais sera redéfinie plus bas) */
-    --dark: #112211; /* Définit une couleur sombre pour le thème */
-    --shadow-color: #226655; /* Définit la couleur des ombres ou d'éléments spécifiques */
-    --light: #f8fdf0; /* Redéfinit la couleur claire pour le thème (remplace la précédente) */
-  }
-  
-  * {
-    box-sizing: border-box; /* Définit le modèle de boîte (box model) en incluant le padding et la bordure dans la taille totale de l'élément */
-    margin: 0; /* Supprime les marges par défaut de tous les éléments */
-    padding: 0; /* Supprime les espacements internes (padding) par défaut de tous les éléments */
-  }
-  
-  /* Styles de base pour le logo */
-  .logo {
-    width: 8rem; /* Définit la largeur du logo */
-    border-radius: 5rem; /* Arrondit les coins du logo pour créer une forme circulaire */
-    padding: 1rem; /* Ajoute un espacement interne autour du logo */
-  }
-  
-  /* Styles pour la barre de navigation (navbar) */
-  .navbar {
-    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
-    align-items: center; /* Centre verticalement les éléments à l'intérieur de la navbar */
-    justify-content: space-between; /* Répartit l'espace disponible entre les éléments de la navbar */
-    background-color: var(--shadow-color); /* Applique une couleur de fond à la navbar à partir de la variable définie */
-    width: 100%; /* Fait en sorte que la navbar prenne toute la largeur de la fenêtre */
-    top: 0; /* Positionne la navbar en haut de la page */
-    left: 0; /* Positionne la navbar à gauche de la page */
-    z-index: 1000; /* Assure que la navbar reste au-dessus des autres éléments de la page */
-    position: fixed; /* Fixe la navbar en haut de la fenêtre même en défilant */
-  }
-  
-  /* Styles pour le menu de navigation */
+  --primary-color: #57c7ab;
+  --light: #ffeeee;
+  --dark: #112211;
+  --shadow-color: #226655;
+  --light: #f8fdf0;
+}
+
+* {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic Styles */
+.logo {
+  width: 4rem;
+  border-radius: 5rem;
+  padding: 1rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--shadow-color);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+  position: fixed; /* Make the navbar fixed at the top */
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu_group a {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+
+/* Burger Menu Icon */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding-right: 1rem;
+}
+
+.burger .line {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+/* Flexbox for main content layout */
+.quizz_box {
+  display: flex;
+  justify-content: space-between; /* Ensures space between the quiz and the image */
+  align-items: flex-start;
+  margin: 20px;
+}
+
+.quizz_box div {
+  flex: 1;
+}
+
+.quizz_box .quizz {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.answer_quizz {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.quest_quizz {
+  text-align: right;
+  margin-right: 20px;
+}
+
+/* Styling the image */
+.pics {
+  max-width: 300px;
+  max-height: 400px;
+}
+
+/* Buttons styling */
+.quest_group {
+  display: block;
+  margin: 10px 0;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+.quest_group:hover {
+  background-color: #ddd;
+}
+
+.btn_validate {
+  display: block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+}
+
+.btn_validate:disabled {
+  background-color: #ccc;
+}
+
+/* Footer */
+footer {
+  background-color: var(--shadow-color);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .menuFoot {
+  list-style: none;
+  padding: 0;
+}
+
+.menu_group2 {
+  margin-top: 10px;
+}
+
+.menu_group2 a {
+  text-decoration: none;
+  color: white;
+}
+@media (max-width: 768px) {
   .menu {
-    display: flex; /* Utilise Flexbox pour aligner les éléments du menu horizontalement */
-    list-style: none; /* Supprime les puces ou numéros des éléments de liste */
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 96px;
+    left: -15px;
+    padding: 10px;
   }
-  
-  .menu_group a {
-    text-decoration: none; /* Supprime la décoration (comme le soulignement) pour les liens */
-    padding: 10px; /* Ajoute un espacement interne autour des liens */
-    color: black; /* Définit la couleur du texte des liens en noir */
+
+  .menu.active {
+    display: flex;
   }
-  
-  /* Styles pour l'icône du menu burger */
+
   .burger {
-    display: none; /* Cache l'icône du burger sur les grands écrans */
-    flex-direction: column; /* Aligne les lignes de l'icône burger en colonne */
-    cursor: pointer; /* Change le curseur en pointeur (main) lorsqu'on survole l'icône */
-    padding-right: 1rem; /* Ajoute un espacement à droite de l'icône burger */
+    display: flex;
   }
-  
-  .burger .line {
-    width: 25px; /* Définit la largeur des lignes de l'icône burger */
-    height: 3px; /* Définit la hauteur des lignes de l'icône burger */
-    background-color: black; /* Colore les lignes du burger en noir */
-    margin: 4px 0; /* Ajoute un espacement vertical entre les lignes du burger */
+  .pics {
+    display: none;
   }
-  
-  /* Styles pour la liste de navigation en pied de page (footer) */
-  .navFoot ul li {
-    display: flex; /* Utilise Flexbox pour aligner les éléments de la liste */
-    justify-content: space-around; /* Répartit l'espace de manière uniforme autour des éléments */
-    flex-direction: row; /* Aligne les éléments de la liste horizontalement */
-    list-style: none; /* Supprime les puces ou numéros des éléments de liste */
-    color: #112211; /* Définit la couleur du texte */
-    text-decoration: none; /* Supprime la décoration du texte pour les éléments de la liste */
-    list-style: none; /* Supprime à nouveau les puces ou numéros des éléments de liste (cette ligne est redondante) */
-  }
-  
-  /* Styles pour l'arrière-plan du corps de la page */
-  body {
-    background-image: url("/assets/djaball.jpg"); /* Définit une image de fond pour la page */
-    background-repeat: no-repeat; /* Empêche la répétition de l'image de fond */
-    background-size: cover; /* Fait en sorte que l'image de fond couvre toute la page */
-  }
-  
-  /* Styles pour le titre du quizz */
-  .quizz {
-    margin-top: 10rem; /* Ajoute une marge supérieure pour espacer le titre du haut de la page */
-    display: flex; /* Utilise Flexbox pour aligner le titre */
-    justify-content: center; /* Centre horizontalement le titre */
-    align-items: center; /* Centre verticalement le titre */
-    color: var(--light); /* Applique la couleur claire définie par la variable */
-  }
-  
-  /* Styles pour la boîte de questions du quizz */
   .quizz_box {
-    background-color: #57c7ab; /* Définit la couleur de fond de la boîte de quizz */
-    border-radius: 5rem; /* Arrondit les coins de la boîte */
-    margin: 4rem; /* Ajoute une marge tout autour de la boîte */
+    display: flex;
+    justify-content: space-between; /* Ensures space between the quiz and the image */
+    align-items: flex-start;
+    margin: 9rem;
   }
-  
-  /* Styles pour les questions du quizz */
-  .quest_quizz {
-    display: flex; /* Utilise Flexbox pour aligner les questions */
-    justify-content: center; /* Centre horizontalement les questions */
-    align-items: center; /* Centre verticalement les questions */
-    padding-top: 2rem; /* Ajoute un espacement en haut des questions */
-    color: var(--light); /* Applique la couleur claire définie par la variable */
-  }
-  
-  /* Styles pour les réponses du quizz */
-  .answer_quizz {
-    display: flex; /* Utilise Flexbox pour aligner les réponses */
-    flex-wrap: wrap; /* Permet aux réponses de passer à la ligne suivante si nécessaire */
-    justify-content: center; /* Centre horizontalement les réponses */
-    padding: 25px; /* Ajoute un espacement interne autour des réponses */
-    color: var(--shadow-color); /* Applique la couleur d'ombre définie par la variable */
-  }
-  
-  /* Styles pour les listes des réponses du quizz */
-  .sport {
-    list-style: none; /* Supprime les puces ou numéros des éléments de liste */
-    display: flex; /* Utilise Flexbox pour aligner les réponses */
-    flex-wrap: wrap; /* Permet aux réponses de passer à la ligne suivante si nécessaire */
-    flex-direction: row; /* Aligne les réponses horizontalement */
-    justify-content: center; /* Centre horizontalement les réponses */
-  }
-  
-  /* Styles pour chaque option de réponse */
-  .quest_group {
-    background-color: aquamarine; /* Définit la couleur de fond des options de réponse */
-    width: 100%; /* Fait en sorte que chaque option occupe toute la largeur disponible */
-    font-size: 1.05em; /* Définit la taille du texte des options */
-    line-height: 4.15; /* Définit la hauteur de ligne (espace vertical) pour les options */
-    text-align: left; /* Aligne le texte des options à gauche */
-    border-radius: 2rem; /* Arrondit les coins des options */
-    padding-left: 1rem; /* Ajoute un espacement interne à gauche des options */
-    margin-bottom: 2rem; /* Ajoute une marge inférieure pour espacer les options les unes des autres */
-  }
-  
-  /* Styles pour les options de réponse lorsqu'elles sont survolées */
-  .quest_group:hover {
-    background-color: var(--shadow-color); /* Change la couleur de fond des options lorsqu'elles sont survolées */
-    color: aquamarine; /* Change la couleur du texte des options lorsqu'elles sont survolées */
-    cursor: pointer; /* Change le curseur en pointeur (main) lorsqu'on survole les options */
-  }
-  
-  /* Styles répétés pour la liste de navigation en pied de page (footer) */
-  .navFoot ul li {
-    display: flex; /* Utilise Flexbox pour aligner les éléments de la liste */
-    justify-content: space-around; /* Répartit l'espace de manière uniforme autour des éléments */
-    flex-direction: row; /* Aligne les éléments de la liste horizontalement */
-    list-style: none; /* Supprime les puces ou numéros des éléments de liste */
-    color: #112211; /* Définit la couleur du texte */
-    text-decoration: none; /* Supprime la décoration du texte pour les éléments de la liste */
-    list-style: none; /* Supprime à nouveau les puces ou numéros des éléments de liste (cette ligne est redondante) */
-  }
-  
-  /* Styles pour les lettres indiquant les options de réponse (A, B, C, D) */
-  .option_letter {
-    display: inline-block; /* Affiche les lettres comme des éléments en ligne */
-    width: 30px; /* Définit la largeur des lettres */
-    height: 30px; /* Définit la hauteur des lettres */
-    line-height: 30px; /* Centre verticalement le texte des lettres */
-    border-radius: 50%; /* Arrondit les lettres pour les afficher comme des cercles */
-    background-color: var(--primary-color); /* Applique la couleur de fond principale aux lettres */
-    text-align: center; /* Centre horizontalement le texte des lettres */
-    font-weight: bold; /* Applique un style en gras au texte des lettres */
-    margin-right: 10px; /* Ajoute une marge à droite des lettres */
-    font-size: 16px; /* Définit la taille du texte des lettres */
-    color: var(--light); /* Applique la couleur claire définie par la variable au texte des lettres */
-  }
-  
-  /* Styles pour le bouton de validation */
-  .btn {
-    display: flex; /* Utilise Flexbox pour aligner le bouton */
-    justify-content: center; /* Centre horizontalement le bouton */
-    align-items: center; /* Centre verticalement le bouton */
-  }
-  
-  /* Styles pour le bouton de validation */
-  .btn_validate {
-    background-color: rgb(228, 147, 147); /* Définit la couleur de fond du bouton */
-    border-radius: 4rem; /* Arrondit les coins du bouton */
-    display: flex; /* Utilise Flexbox pour aligner le bouton */
-    justify-content: center; /* Centre horizontalement le bouton */
-    align-items: center; /* Centre verticalement le bouton */
-    margin-bottom: 2rem; /* Ajoute une marge inférieure pour espacer le bouton */
-    padding: 1rem; /* Ajoute un espacement interne autour du texte du bouton */
-    width: 50%; /* Définit la largeur du bouton */
-    font-size: 1.05em; /* Définit la taille du texte du bouton */
-  }
-  
-  /* Styles pour le bouton de validation lorsqu'il est survolé */
-  .btn_validate:hover {
-    cursor: pointer; /* Change le curseur en pointeur (main) lorsqu'on survole le bouton */
-    background-color: rgb(92, 85, 85); /* Change la couleur de fond du bouton lorsqu'il est survolé */
-    transition: 0.25 ease-out; /* Applique une transition douce lors du changement de couleur */
-    color: var(--light); /* Applique la couleur claire définie par la variable au texte du bouton */
-  }
-  
-  /* Styles pour un bouton désactivé */
-  .disabled {
-    pointer-events: none; /* Désactive les interactions avec le bouton */
-    opacity: 0.6; /* Réduit l'opacité du bouton pour indiquer qu'il est désactivé */
-  }
-  
-  /* Styles pour le menu de navigation en pied de page (footer) */
-  .menuFoot {
-    display: flex; /* Utilise Flexbox pour aligner les éléments du menu */
-    justify-content: space-around; /* Répartit l'espace de manière uniforme autour des éléments */
-    align-items: center; /* Centre verticalement les éléments du menu */
-    flex-direction: row; /* Aligne les éléments du menu horizontalement */
-    background-color: #226655; /* Définit la couleur de fond du menu */
-    height: 5rem; /* Définit la hauteur du menu */
-  }
-  
-  /* Styles pour les liens et les adresses mail */
-  a,
-  .mail {
-    color: aliceblue; /* Définit la couleur du texte des liens et des adresses mail */
-    text-decoration: none; /* Supprime la décoration (comme le soulignement) pour les liens et les adresses mail */
-  }
-  
-  /* Styles pour la réactivité (Responsive Design) */
-  @media (max-width: 768px) {
-    /* Applique ces styles uniquement pour les écrans de moins de 768px de large */
-    .logo {
-      width: 6rem; /* Réduit la largeur du logo pour les petits écrans */
-      border-radius: 5rem; /* Maintient l'arrondi des coins du logo */
-      padding: 1rem; /* Ajoute un espacement interne autour du logo */
-    }
-  
-    .menu {
-      display: none; /* Cache le menu par défaut sur les petits écrans */
-      flex-direction: column; /* Aligne les éléments du menu verticalement sur les petits écrans */
-      justify-content: space-evenly; /* Répartit l'espace de manière uniforme entre les éléments du menu */
-      align-items: center; /* Centre horizontalement les éléments du menu */
-      width: 100vw; /* Le menu occupe toute la largeur de la fenêtre (viewport) */
-      height: 100vh; /* Le menu occupe toute la hauteur de la fenêtre */
-      background-color: var(--primary-color); /* Applique la couleur de fond principale au menu */
-      position: absolute; /* Positionne le menu de manière absolue par rapport à la navbar */
-      top: 96px; /* Positionne le menu juste en dessous de la navbar */
-      left: -15px; /* Décale légèrement le menu à gauche pour un alignement parfait */
-      padding: 10px; /* Ajoute un espacement interne autour des éléments du menu */
-    }
-  
-    .menu.active {
-      display: flex; /* Affiche le menu sous forme de flexbox lorsque le menu est activé */
-    }
-  
-    .burger {
-      display: flex; /* Affiche l'icône du burger sur les petits écrans */
-    }
-  
-    .quest_quizz {
-      font-size: 1.2em; /* Augmente la taille du texte des questions sur les petits écrans */
-      text-align: center; /* Centre le texte des questions horizontalement sur les petits écrans */
-      padding: 2rem; /* Ajoute un espacement autour du texte des questions sur les petits écrans */
-    }
-  
-    .quest_group {
-      font-size: 0.90em; /* Réduit la taille du texte des options de réponse sur les petits écrans */
-    }
-  }
-  
+}

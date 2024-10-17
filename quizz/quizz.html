@@ -11,69 +11,90 @@
     <link rel="stylesheet" href="/quizz/quiz.css" />
     <title>teamDjab</title>
   </head>
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <img src="/assets/teamDjab.jpg" class="logo" alt="logo_website" />
-    
-            <div class="burger">
-              <div class="line"></div>
-              <div class="line"></div>
-              <div class="line"></div>
-            </div>
-    
-            <ul class="menu">
-              <li class="menu_group"><a href="/index/index.html">Accueil</a></li>
-              <li class="menu_group"><a href="/basketball/basketball.html">Basketball</a></li>
-              <li class="menu_group"><a href="/streetball/streetball.html">Streetball</a></li>
-              <li class="menu_group"><a href="/form/form.html">Formulaire</a></li>
-              <li class="menu_group"><a href="/quizz/quizz.html">Quizz</a></li>
-            </ul>
-          </nav>
+      <nav class="navbar">
+        <img src="/assets/teamDjab.jpg" class="logo" alt="logo_website" />
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+
+        <ul class="menu">
+          <li class="menu_group"><a href="/index/index.html">Accueil</a></li>
+          <li class="menu_group">
+            <a href="/basketball/basketball.html">Basketball</a>
+          </li>
+          <li class="menu_group">
+            <a href="/streetball/streetball.html">Streetball</a>
+          </li>
+          <li class="menu_group"><a href="/form/form.html">Formulaire</a></li>
+          <li class="menu_group"><a href="/quizz/quizz.html">Quizz</a></li>
+        </ul>
+      </nav>
     </header>
+
     <main>
-<h1 class="quizz">Quizz</h1>
+      <div class="quizz_box">
+        <div>
+          <h1 class="quizz">Quizz</h1>
+          <h2 class="quest_quizz">
+            Quelle est la signification de l'acronyme sportif "NBA" ?
+          </h2>
+          <div class="answer_quizz">
+            <button class="quest_group">
+              <span class="option_letter">A</span> National Basketball American
+            </button>
+            <button class="quest_group">
+              <span class="option_letter">B</span> National Basketball
+              Association
+            </button>
+            <button class="quest_group">
+              <span class="option_letter">C</span> National Basketball Action
+            </button>
+            <button class="quest_group">
+              <span class="option_letter">D</span> National Basketball Award
+            </button>
+            <button class="btn_validate">Valider</button>
+          </div>
+        </div>
 
-<div class="quizz_box">
-    <h2 class="quest_quizz">Quelle est la signification de l'acronyme sportif "NBA" ?</h2>
-    <div class="answer_quizz">
-        <button class="quest_group"><span class="option_letter">A</span> National Basketball American</button>
-        <button class="quest_group"><span class="option_letter">B</span> National Basketball Association</button>
-        <button class="quest_group"><span class="option_letter">C</span> National Basketball Action</button>
-        <button class="quest_group"><span class="option_letter">D</span> National Basketball Award</button>
-</div>
-
-<div class="btn">
-    <button class="btn_validate"> 
-        Valider
-    </button>
-</div>
-
+        <div>
+          <img
+            src="/assets/picture/stern.webp"
+            class="pics"
+            alt="david_stern"
+          />
+        </div>
+      </div>
     </main>
+
     <footer>
-        <nav class="navFoot">
-            <ul class="menuFoot">
-              <h4>Contact:</h4>
-              <li class="menu_group2">
-                <a
-                  href="https://www.linkedin.com/feed/"
-                  title="Retrouvez toute mon actualité sur mon profil"
-                  >linkedin</a
-                >
-              </li>
-              <li class="menu_group2">
-                <a href="https://github.com/djibmsa" target="_blank">github</a>
-              </li>
-              <li class="menu_group2">
-                <p class="mail">djibmsa@gmail.com</p>
-              </li>
-              <li class="menu_group2">
-                <span class="copyqright">teamDjab 2024 ©</span>
-              </li>
-            </ul>
-          </nav>
+      <nav class="navFoot">
+        <ul class="menuFoot">
+          <h4>Contact:</h4>
+          <li class="menu_group2">
+            <a
+              href="https://www.linkedin.com/feed/"
+              title="Retrouvez toute mon actualité sur mon profil"
+              >linkedin</a
+            >
+          </li>
+          <li class="menu_group2">
+            <a href="https://github.com/djibmsa" target="_blank">github</a>
+          </li>
+          <li class="menu_group2">
+            <p class="mail">djibmsa@gmail.com</p>
+          </li>
+          <li class="menu_group2">
+            <span class="copyright">teamDjab 2024 ©</span>
+          </li>
+        </ul>
+      </nav>
     </footer>
-    
+
     <script src="/quizz/quizz.js"></script>
-</body>
+  </body>
 </html>
