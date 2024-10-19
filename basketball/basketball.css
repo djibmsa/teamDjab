@@ -56,7 +56,28 @@
   background-color: black;
   margin: 4px 0;
 }
+.player-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin: 15px;
+  width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
 
+.player-card:hover {
+  transform: scale(1.05);
+}
+
+.player-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
 .players_teams {
   display: flex;
   justify-content: center;
@@ -109,6 +130,20 @@ h2 {
   height: 50px;
   background-color: lightblue;
   width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color:#57c7ab ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color:#226655;
 }
 
 /* Footer */
