@@ -64,6 +64,7 @@
   max-width: 350px; /* Limite la largeur du formulaire */
   margin: 0 auto; /* Centre le formulaire sur la page */
   margin-top: 7rem;
+  height: 130vh;
 }
 
 .formSport input,
@@ -117,6 +118,11 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;          /* Added: fixes the footer at the bottom */
+  left: 0;            /* Added: ensures it starts at the left */
+  width: 100%;        /* Added: stretches it across the full width of the page */
+  z-index: 1000;      /* Added: ensures it's above other elements */
 }
 
 footer .menuFoot {
@@ -132,6 +138,7 @@ footer .menuFoot {
   text-decoration: none;
   color: white;
 }
+
 
 /* Responsive Styling */
 

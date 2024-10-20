@@ -56,7 +56,9 @@
   background-color: black;
   margin: 4px 0;
 }
-
+.contenu {
+  height: 200vh;
+}
 .harlem {
   margin-top: 7rem;
   display: flex;
@@ -81,6 +83,11 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;          /* Added: fixes the footer at the bottom */
+  left: 0;            /* Added: ensures it starts at the left */
+  width: 100%;        /* Added: stretches it across the full width of the page */
+  z-index: 1000;      /* Added: ensures it's above other elements */
 }
 
 footer .menuFoot {

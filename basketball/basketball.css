@@ -132,6 +132,11 @@ h2 {
   width: 100%;
 }
 
+#team-container {
+  display: flex;
+  flex-direction: row;
+}
+
 button {
   padding: 10px 20px;
   background-color:#57c7ab ;
@@ -152,6 +157,11 @@ footer {
   color: white;
   padding: 20px;
   text-align: center;
+  position: fixed;
+  bottom: 0;          /* Added: fixes the footer at the bottom */
+  left: 0;            /* Added: ensures it starts at the left */
+  width: 100%;        /* Added: stretches it across the full width of the page */
+  z-index: 1000;      /* Added: ensures it's above other elements */
 }
 
 footer .menuFoot {
@@ -167,6 +177,8 @@ footer .menuFoot {
   text-decoration: none;
   color: white;
 }
+
+
 /* Responsive Styling */
 @media (max-width: 768px) {
   .menu {

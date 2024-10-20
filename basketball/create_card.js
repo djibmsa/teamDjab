@@ -15,6 +15,13 @@ const player = [
       img: "/assets/yabu.jpg",
     },
     {
+      name: "N. Batum",
+      team: "Equipe de France",
+      type: "Allier fort",
+      desc: "Il allie la polyvalence",
+      img: "/assets/batman.png",
+    },
+    {
       name: "V. Wembanyama",
       team: "Equipe de France",
       type: "Pivot moderne",
